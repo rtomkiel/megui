@@ -1,4 +1,4 @@
-@extends('global.base')
+@extends('global.loginbase')
 
 @section('content')
 <div class="container text-center">
