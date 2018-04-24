@@ -28,6 +28,6 @@ class User extends Authenticatable
     ];
     
     public function databases(){
-        return $this->hasMany(Database::class);
+        return $this->hasMany(Database::class, 'user_id');
     }
 }

@@ -1,11 +1,6 @@
 @extends('global.base')
 
-@section('menu')
-@include('global.menu')
-@endsection
-
-
-    @section('content')
+@section('content')
 
 
     <div id="page-wrapper">
@@ -23,7 +18,7 @@
                         Digite as informações necessárias
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="{{ url('/novo-db/store') }}" method="post">
+                        <form role="form" action="{{ url('/database/novo/store') }}" method="post">
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="col-lg-4">

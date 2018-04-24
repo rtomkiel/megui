@@ -117,10 +117,31 @@
                     <li>
                         <a href="{{ url('/home') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
+                    
                     <li>
-                        <a href="{{ url('/novo-db') }}"><i class="fa fa-edit"></i> Editor</a>
+                        <a href="{{ url('/databases/novo') }}"><i class="fa fa-database"></i> Adicionar banco <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ url('/databases') }}">Listar Bancos de dados</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/databases/novo') }}">Adicionar novo</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                     </li>
-                    <li><a href="#"><i class="fa fa-gear"></i> Configurar site</a>
+                    <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Administrador<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ url('/usuarios') }}">Listar usuários</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/usuarios/novo') }}">Adicionar usuário</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                     <li>
                         <a href="#"><i class="fa fa-internet-explorer"></i> Acessar site</a>
                     </li>
