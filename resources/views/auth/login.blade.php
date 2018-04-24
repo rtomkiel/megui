@@ -9,20 +9,13 @@
         
         <label for="inputEmail" class="sr-only">Endereço de e-mail</label>
         <input input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Digite o seu e-mail" required autofocus>
-        @if ($errors->has('email'))
-        <span class="invalid-feedback">
-            <strong>{{ $errors->first('email') }}</strong>
-        </span>
-        @endif
-
         <label for="inputPassword" class="sr-only">Senha</label>
         <input input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Sua senha" required>
-        @if ($errors->has('password'))
+        @if ($errors->has('email'))
         <span class="invalid-feedback">
-            <strong>{{ $errors->first('password') }}</strong>
+            <strong>E-mail ou senha inválidos.</strong>
         </span>
         @endif
-        
         <div class="checkbox mb-3">
             <label>
                 <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Lembrar') }}

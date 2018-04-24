@@ -25,14 +25,14 @@ Route::group(["prefix" => "databases"], function() {
         return view('skell.novodb');
     });
     Route::post("/novo/store", "DatabaseController@store");
-    Route::Auth();
 });
 
 
 Route::group(["prefix" => "usuarios"], function() {
     Route::get('/', 'UserController@users');
-    Route::get('/novo', function () {
-        return view('skell.listuser');
-    });
-    Route::Auth();
+    Route::get('/novo', 'UserController@newuser');
+    Route::post("/novo/store", "UserController@create");
+    Route::get('/{user}', 'UserController@getEdit');
+    Route::post("/store", "UserController@postEdit");
+    
 });

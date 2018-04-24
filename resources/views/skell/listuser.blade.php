@@ -33,10 +33,10 @@
                                 @foreach($users as $users)
                                 <tr class="odd gradeX">
                                 <td>{{ $users->id }}</td>
-                                <td>{{ $users->name }}</td>
+                                <td><a href="{{ url('usuarios', $users->id) }}">{{ $users->name }}</a></td>
                                 <td>{{ $users->email }}</td>
                                 <td>{{ $users->created_at }}</td>
-                                <td> </td>
+                                <td>{{ $users->type }}</td>
                                 </tr>
                                 @endforeach
                                 </tbody>
